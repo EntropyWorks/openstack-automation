@@ -1,13 +1,8 @@
-#!jinja|json
-{
-	{% if grains['os'] == 'Ubuntu' %}
-		"linux-headers-install": {
-			"pkg": [
-				"installed",
-				{
-					"name": "linux-headers-{{ grains['kernelrelease'] }}"
-				}
-			]
-		}
-	{% endif %}
-}
+---
+  {% if grains['os'] == 'Ubuntu' %}
+  linux-headers-install: 
+    pkg: 
+      - "installed"
+      - name: "linux-headers-{{ grains['kernelrelease'] }}"
+  {% endif %}
+

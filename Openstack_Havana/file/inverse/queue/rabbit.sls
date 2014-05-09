@@ -1,8 +1,5 @@
-#!jinja|json
-{
-    "rabbitmq-server": {
-        "pkg": [
-            "purged"
-        ]
-    }
-}
+---
+  rabbitmq-server: 
+    pkg: 
+      - "purged"
+
