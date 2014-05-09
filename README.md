@@ -1,6 +1,10 @@
 openstack-automation
 ====================
 
+**Note:** This is a fork from [openstack-automation](https://github.com/CSSCorp/openstack-automation.git "openstack-automation"). I did this because I believe that JSON is not a good choice for configuration by humans. JSON is great for passing between services that are parsed by machines. 
+
+***
+
 Openstack deployment using saltstack
 
 There are several methods for automated deployment of openstack cluster. In this blog we attempt to do it using [saltstack](http://docs.saltstack.com/ "Saltstack"). There is almost no coding involved and it can be easily maintained. Above all it is as easy as talking to your servers and asking them to configure themselves. 
@@ -251,7 +255,7 @@ salt -C 'I@cluster_type:openstack' state.highstate
 Adding new compute node
 =======================
 
-Adding a new machine to a cluster is as easy as editing a json file. All you have to do is edit 'pillar/openstack_cluster.sls' as below.
+Adding a new machine to a cluster is as easy as editing a yaml file. All you have to do is edit 'pillar/openstack_cluster.sls' as below.
 
 <pre>
 ---
